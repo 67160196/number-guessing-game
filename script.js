@@ -3,7 +3,7 @@
 // ตัวแปรเก็บตัวเลขลับ
 let secretNumber = 0;
 
-// ตัวแปรนับจํานวนครั ้งที ่ทาย
+// ตัวแปรนับจํานวนครั้งที่ทาย
 let attemptCount = 0;
 
 // ฟังก์ชันเริ่มเกมใหม่
@@ -29,15 +29,14 @@ function checkGuess() {
     return;
   }
 
-  attemptCount++;
-
+  attemptCount++; // เพิ่มตรงนี้
   if (guessValue === secretNumber) {
-    resultContainer.innerHTML = ` 
-            <div class="alert alert-success" role="alert"> 
-                <h5>✓ ถูกต้อง!</h5> 
-                <p>คุณทายถูกในครั ้งที ่ ${attemptCount}</p> 
-            </div> 
-        `;
+    resultContainer.innerHTML = `
+ <div class="alert alert-success" role="alert">
+ <h5>✓ ถูกต้อง!</h5>
+ <p>คุณทายถูกในครั้งที่ ${attemptCount}</p>
+ </div>
+ `;
   } else if (guessValue > secretNumber) {
     resultContainer.innerHTML = ` 
             <div class="alert alert-warning" role="alert"> 
@@ -57,23 +56,23 @@ function checkGuess() {
   guessInput.focus();
 }
 
-// ฟังก์ชันอัปเดตจํานวนครั ้ง
+// ฟังก์ชันอัปเดตจํานวนครั้ง
 function updateDisplay() {
   const attemptsContainer = document.getElementById("attemptsContainer");
-  attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั ้ง`;
+  attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
 }
 
-// filepath: script.js 
-// ...existing code... 
- 
-// ฟังก์ชันเริ่มเกมใหม่ 
-function resetGame() { 
-  initializeGame(); 
-  document.getElementById("resultContainer").innerHTML = ""; 
-  document.getElementById("guessInput").value = ""; 
-  document.getElementById("guessInput").focus(); 
-} 
- 
+// filepath: script.js
+// ...existing code...
+
+// ฟังก์ชันเริ่มเกมใหม่
+function resetGame() {
+  initializeGame();
+  document.getElementById("resultContainer").innerHTML = "";
+  document.getElementById("guessInput").value = "";
+  document.getElementById("guessInput").focus();
+}
+
 // ...existing code...
 
 // เริ่มเกมเมื ่อโหลดหน้า
